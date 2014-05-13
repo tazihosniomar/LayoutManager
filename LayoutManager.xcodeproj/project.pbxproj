@@ -21,6 +21,9 @@
 		649C5BDA19225F41001DA24B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649C5BBC19225F41001DA24B /* UIKit.framework */; };
 		649C5BE219225F41001DA24B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649C5BE019225F41001DA24B /* InfoPlist.strings */; };
 		649C5BE419225F41001DA24B /* LayoutManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C5BE319225F41001DA24B /* LayoutManagerTests.m */; };
+		649C5BF419225F7A001DA24B /* AbstractLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C5BEF19225F7A001DA24B /* AbstractLayoutView.m */; };
+		649C5BF519225F7A001DA24B /* HLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C5BF119225F7A001DA24B /* HLayoutView.m */; };
+		649C5BF619225F7A001DA24B /* VLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C5BF319225F7A001DA24B /* VLayoutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		649C5BDF19225F41001DA24B /* LayoutManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LayoutManagerTests-Info.plist"; sourceTree = "<group>"; };
 		649C5BE119225F41001DA24B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		649C5BE319225F41001DA24B /* LayoutManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutManagerTests.m; sourceTree = "<group>"; };
+		649C5BEE19225F7A001DA24B /* AbstractLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractLayoutView.h; sourceTree = "<group>"; };
+		649C5BEF19225F7A001DA24B /* AbstractLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractLayoutView.m; sourceTree = "<group>"; };
+		649C5BF019225F7A001DA24B /* HLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLayoutView.h; sourceTree = "<group>"; };
+		649C5BF119225F7A001DA24B /* HLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLayoutView.m; sourceTree = "<group>"; };
+		649C5BF219225F7A001DA24B /* VLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLayoutView.h; sourceTree = "<group>"; };
+		649C5BF319225F7A001DA24B /* VLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLayoutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 		649C5BBE19225F41001DA24B /* LayoutManager */ = {
 			isa = PBXGroup;
 			children = (
+				649C5BED19225F6C001DA24B /* Layouts */,
 				649C5BC719225F41001DA24B /* LayoutManagerAppDelegate.h */,
 				649C5BC819225F41001DA24B /* LayoutManagerAppDelegate.m */,
 				649C5BCA19225F41001DA24B /* Main.storyboard */,
@@ -150,6 +160,19 @@
 				649C5BE019225F41001DA24B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		649C5BED19225F6C001DA24B /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				649C5BEE19225F7A001DA24B /* AbstractLayoutView.h */,
+				649C5BEF19225F7A001DA24B /* AbstractLayoutView.m */,
+				649C5BF019225F7A001DA24B /* HLayoutView.h */,
+				649C5BF119225F7A001DA24B /* HLayoutView.m */,
+				649C5BF219225F7A001DA24B /* VLayoutView.h */,
+				649C5BF319225F7A001DA24B /* VLayoutView.m */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649C5BF519225F7A001DA24B /* HLayoutView.m in Sources */,
+				649C5BF619225F7A001DA24B /* VLayoutView.m in Sources */,
+				649C5BF419225F7A001DA24B /* AbstractLayoutView.m in Sources */,
 				649C5BC919225F41001DA24B /* LayoutManagerAppDelegate.m in Sources */,
 				649C5BCF19225F41001DA24B /* LayoutManagerViewController.m in Sources */,
 				649C5BC519225F41001DA24B /* main.m in Sources */,

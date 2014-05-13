@@ -7,8 +7,11 @@
 //
 
 #import "LayoutManagerViewController.h"
+#import "VLayoutView.h"
 
 @interface LayoutManagerViewController ()
+@property (weak, nonatomic) IBOutlet VLayoutView *vLayoutView;
+@property (weak, nonatomic) IBOutlet UIView *viewToHide;
 
 @end
 
@@ -24,6 +27,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnTouchUpInside:(UIButton*)sender
+{
+    if([sender.titleLabel.text isEqualToString:@"hide"]) {
+        [sender setTitle:@"show" forState:UIControlStateNormal];
+        self.viewToHide.hidden = YES;
+    } else {
+        [sender setTitle:@"hide" forState:UIControlStateNormal];
+        self.viewToHide.hidden = NO;
+    }
+    [self.vLayoutView setSize];
 }
 
 @end
