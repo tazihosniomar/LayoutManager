@@ -4,16 +4,17 @@
 
 - (CGSize)layoutSubviewsEffectively:(BOOL)effectively
 {
-    int total_width = self.leftMargin, max_height = 0;
+    int total_width = self.leftMargin, max_height = 0, nbViewsNotHidden = 0;
     for (UIView *child in self.subviews)
     {
         if(child.hidden == NO) {
+            nbViewsNotHidden++;
             total_width += child.frame.size.width;
             if (max_height < child.frame.size.height)
                 max_height = child.frame.size.height;
         }
     }
-    total_width += ([self.subviews count] - 1) * self.spacing + self.rightMargin;
+    total_width += (nbViewsNotHidden - 1) * self.spacing + self.rightMargin;
     if (effectively == YES)
     {
         int left, top, baseline = (self.frame.size.height - self.topMargin
