@@ -202,4 +202,15 @@
     }
 }
 
+- (void)dealloc
+{
+    for (UIView *view in self.subviews) {
+        @try {
+            [view removeObserver:self forKeyPath:@"hidden" context:nil];
+        }
+        @catch (NSException * __unused exception) {}
+    }
+}
+
+
 @end
