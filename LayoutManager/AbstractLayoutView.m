@@ -122,7 +122,7 @@
     BOOL showsVerticalScrollIndicator = self.showsVerticalScrollIndicator;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
-    [self addSubviewsWhenHiddenObserver];
+    [self addSubviewsHiddenObserver];
     CGSize contentSize = [self layoutSubviewsEffectively:YES];
     self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
     self.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
@@ -184,7 +184,7 @@
         [[self nextResponder] touchesCancelled:touches withEvent:event];
 }
 
-- (void)addSubviewsWhenHiddenObserver
+- (void)addSubviewsHiddenObserver
 {
     for (UIView *view in self.subviews) {
         @try {
