@@ -485,6 +485,7 @@
 				649C5BE919225F41001DA24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		649C5BEA19225F41001DA24B /* Build configuration list for PBXNativeTarget "LayoutManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				649C5BEC19225F41001DA24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

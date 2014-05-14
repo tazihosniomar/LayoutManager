@@ -122,6 +122,7 @@
     BOOL showsVerticalScrollIndicator = self.showsVerticalScrollIndicator;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
+    [self addSubviewsWhenHiddenObserver];
     CGSize contentSize = [self layoutSubviewsEffectively:YES];
     self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
     self.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
@@ -181,6 +182,24 @@
 {
     if (self.scrollEnabled == NO)
         [[self nextResponder] touchesCancelled:touches withEvent:event];
+}
+
+- (void)addSubviewsWhenHiddenObserver
+{
+    for (UIView *view in self.subviews) {
+        @try {
+            [view removeObserver:self forKeyPath:@"hidden" context:nil];
+        }
+        @catch (NSException * __unused exception) {}
+        [view addObserver:self forKeyPath:@"hidden" options:0 context:nil];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
+{
+    if ([keyPath isEqualToString:@"hidden"]) {
+        [self setNeedsLayout];
+    }
 }
 
 @end
