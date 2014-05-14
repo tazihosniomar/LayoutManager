@@ -23,6 +23,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.vLayoutView.hAlignment = UIControlContentHorizontalAlignmentLeft; //horizontal Alignment
+    self.vLayoutView.vAlignment = UIControlContentVerticalAlignmentTop; // vertical Alignment
+    self.vLayoutView.spacing = 10; //spacing between subviews
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

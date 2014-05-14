@@ -37,15 +37,6 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="hAlignment" value="1"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="vAlignment" value="1"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="spacing" value="10"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="leftMargin" value="20"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="topMargin" value="20"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomMargin" value="0"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MB0-eW-LG9">
                                 <rect key="frame" x="381" y="74" width="98" height="61"/>
