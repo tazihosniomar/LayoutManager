@@ -47,7 +47,7 @@
         [sender setTitle:@"hide" forState:UIControlStateNormal];
         self.viewToHide.hidden = NO;
     }
-    [self.vLayoutView setSize];
+    [self.vLayoutView setNeedsLayout];
 }
 
 @end
