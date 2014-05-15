@@ -29,7 +29,8 @@
     
     self.vLayoutView.hAlignment = UIControlContentHorizontalAlignmentLeft; //horizontal Alignment
     self.vLayoutView.vAlignment = UIControlContentVerticalAlignmentTop; // vertical Alignment
-    self.vLayoutView.spacing = 10; //spacing between subviews    
+    self.vLayoutView.spacing = 10; //spacing between subviews
+    self.vLayoutView.removeOnHide = YES; // YES means remove blank spaces when a view is hidden
 }
 
 - (void)didReceiveMemoryWarning

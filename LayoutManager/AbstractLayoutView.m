@@ -9,6 +9,7 @@
 @synthesize bottomMargin = _bottomMargin;
 @synthesize hAlignment = _hAlignment;
 @synthesize vAlignment = _vAlignment;
+@synthesize removeOnHide = _removeOnHide;
 
 - (id)init
 {
@@ -122,7 +123,9 @@
     BOOL showsVerticalScrollIndicator = self.showsVerticalScrollIndicator;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
-    [self addSubviewsHiddenObserver];
+    if(self.removeOnHide) {
+        [self addSubviewsHiddenObserver];
+    }
     CGSize contentSize = [self layoutSubviewsEffectively:YES];
     self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
     self.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
@@ -204,11 +207,13 @@
 
 - (void)dealloc
 {
-    for (UIView *view in self.subviews) {
-        @try {
-            [view removeObserver:self forKeyPath:@"hidden" context:nil];
+    if(self.removeOnHide) {
+        for (UIView *view in self.subviews) {
+            @try {
+                [view removeObserver:self forKeyPath:@"hidden" context:nil];
+            }
+            @catch (NSException * __unused exception) {}
         }
-        @catch (NSException * __unused exception) {}
     }
 }
 

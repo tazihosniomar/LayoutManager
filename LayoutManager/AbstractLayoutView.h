@@ -5,6 +5,7 @@
     int _topMargin, _bottomMargin;
     UIControlContentHorizontalAlignment _hAlignment;
     UIControlContentVerticalAlignment _vAlignment;
+    BOOL _removeOnHide;
 }
 
 - (id)init;
@@ -41,5 +42,6 @@
 @property (nonatomic) int bottomMargin;
 @property (nonatomic) UIControlContentHorizontalAlignment hAlignment;
 @property (nonatomic) UIControlContentVerticalAlignment vAlignment;
+@property (nonatomic) BOOL removeOnHide;
 
 @end
